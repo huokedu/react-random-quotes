@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
-function Quote(props) {
-  return (
-    <p className="Quote">
-      {props.quote}
-    </p>
-  );
+class Quote extends Component {
+  render() {
+    return (
+      <p className="Quote">
+        {this.props.quote}
+      </p>
+    );
+  }
 }
 
 export default Quote;
