@@ -6,8 +6,14 @@ import Controls from './Controls';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {selectedQuoteIndex: -1};
+    this.state = {selectedQuoteIndex: 0};
     this.handleNewQuoteClick = this.handleNewQuoteClick.bind(this);
+  }
+
+  componentWillMount() {
+    this.setState((prevState, props) => ({
+      selectedQuoteIndex: ~~(Math.random() * props.quotes.length)
+    }));
   }
 
   handleNewQuoteClick() {
@@ -17,12 +23,16 @@ class App extends Component {
   }
 
   render() {
+    const {selectedQuoteIndex} = this.state;
+    const {quotes} = this.props;
+    const {quote, from} = quotes[selectedQuoteIndex];
+
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Random Quotes</h1>
         </header>
-        <Quote quote="An inspiring quote" />
+        <Quote quote={quote} from={from} />
         <Controls onNewQuoteClick={this.handleNewQuoteClick} />
       </div>
     );
