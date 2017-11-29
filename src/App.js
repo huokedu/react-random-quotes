@@ -2,18 +2,23 @@ import React, { Component } from 'react';
 import './App.css';
 import Quote from './Quote';
 import Controls from './Controls';
+import generateRandomIndex from './generateRandomIndex';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {selectedQuoteIndex: 0};
+    this.state = {selectedQuoteIndex: -1};
     this.handleNewQuoteClick = this.handleNewQuoteClick.bind(this);
   }
 
   setSelectedQuoteIndex() {
-    this.setState((prevState, props) => ({
-      selectedQuoteIndex: ~~(Math.random() * props.quotes.length)
-    }));
+    this.setState((prevState, props) => {
+      let selectedQuoteIndex = generateRandomIndex(props.quotes.length);
+      while (selectedQuoteIndex === prevState.selectedQuoteIndex) {
+        selectedQuoteIndex = generateRandomIndex(props.quotes.length);
+      }
+      return {selectedQuoteIndex};
+    });
   }
 
   componentWillMount() {
