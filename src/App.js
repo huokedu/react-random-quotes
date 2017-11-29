@@ -10,16 +10,18 @@ class App extends Component {
     this.handleNewQuoteClick = this.handleNewQuoteClick.bind(this);
   }
 
-  componentWillMount() {
+  setSelectedQuoteIndex() {
     this.setState((prevState, props) => ({
       selectedQuoteIndex: ~~(Math.random() * props.quotes.length)
     }));
   }
 
+  componentWillMount() {
+    this.setSelectedQuoteIndex();
+  }
+
   handleNewQuoteClick() {
-    this.setState((prevState, props) => ({
-      selectedQuoteIndex: ~~(Math.random() * props.quotes.length)
-    }));
+    this.setSelectedQuoteIndex();
   }
 
   render() {
