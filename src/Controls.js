@@ -14,7 +14,8 @@ class Controls extends Component {
     return (
       <div className="Controls">
         <button onClick={this.handleNewQuoteClick}>New Quote</button>
-        <button>Tweet</button>
+        {/* The <a>'s href will be set dynamically */}
+        <a target="_blank" rel="noopener nofollow">Tweet</a>
       </div>
     );
   }
