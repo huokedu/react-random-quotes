@@ -11,10 +11,18 @@ class Controls extends Component {
   }
 
   render() {
+    const {quote, from} = this.props;
+    const toTweet = `${quote} -${from}`;
+    const tweetIntentUrl
+      = `https://twitter.com/intent/tweet?text=${encodeURIComponent(toTweet)}`;
+
     return (
       <div className="Controls">
         <button onClick={this.handleNewQuoteClick}>New Quote</button>
-        <button>Tweet</button>
+        <a
+          href={tweetIntentUrl}
+          target="_blank"
+          rel="noopener nofollow">Tweet</a>
       </div>
     );
   }
