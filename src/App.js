@@ -40,7 +40,10 @@ class App extends Component {
           <h1 className="App-title">Random Quotes</h1>
         </header>
         <Quote quote={quote} from={from} />
-        <Controls onNewQuoteClick={this.handleNewQuoteClick} />
+        <Controls
+          quote={quote}
+          from={from}
+          onNewQuoteClick={this.handleNewQuoteClick} />
       </div>
     );
   }
