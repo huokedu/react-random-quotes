@@ -1,0 +1,12 @@
+.Quote {
+  margin: 0;
+}
+
+.Quote-quote {
+  font-size: 22px;
+  line-height: 1.4em;
+}
+
+.Quote-from::before {
+  content: "—";
+}

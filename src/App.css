@@ -1,4 +1,10 @@
 .App {
-  text-align: center;
+  width: 60%;
+  min-height: 250px;
+  outline: 1px solid red; /* remove line later */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: 20px;
 }
 
