@@ -36,14 +36,11 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Random Quotes</h1>
-        </header>
-        <Quote quote={quote} from={from} />
         <Controls
           quote={quote}
           from={from}
           onNewQuoteClick={this.handleNewQuoteClick} />
+        <Quote quote={quote} from={from} />
       </div>
     );
   }
