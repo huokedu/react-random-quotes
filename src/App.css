@@ -1,7 +1,6 @@
 .App {
   width: 60%;
-  min-height: 250px;
-  outline: 1px solid red; /* remove line later */
+  min-height: 400px;
   display: flex;
   flex-flow: column nowrap;
   padding: 20px;
