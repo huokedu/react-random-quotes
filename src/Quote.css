@@ -1,6 +1,7 @@
 .Quote {
   border: 4px solid #ef6f6c;
   margin: 0;
+  padding: 10px 20px;
 }
 
 .Quote-quote {
