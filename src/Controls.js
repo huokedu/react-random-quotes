@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Controls.css';
 
 class Controls extends Component {
   constructor(props) {
@@ -18,8 +19,11 @@ class Controls extends Component {
 
     return (
       <div className="Controls">
-        <button onClick={this.handleNewQuoteClick}>New Quote</button>
+        <button
+          className="Controls-btn"
+          onClick={this.handleNewQuoteClick}>New Quote</button>
         <a
+          className="Controls-btn"
           href={tweetIntentUrl}
           target="_blank"
           rel="noopener nofollow">Tweet</a>
