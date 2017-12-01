@@ -1,11 +1,12 @@
 .Quote {
   border: 4px solid #ef6f6c;
+  font-family: 'Boogaloo', cursive;
   margin: 0;
   padding: 10px 20px;
 }
 
 .Quote-quote {
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1.4em;
 }
 
