@@ -9,6 +9,10 @@
   line-height: 1.4em;
 }
 
+.Quote-quote .fa {
+  color: #ef6f6c;
+}
+
 .Quote-from::before {
   content: "—";
 }
