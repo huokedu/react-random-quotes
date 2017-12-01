@@ -15,6 +15,11 @@
   transition: all .2s ease-in;
 }
 
+/* https://stackoverflow.com/q/71074 */
+.Controls-btn::-moz-focus-inner {
+  border: 0;
+}
+
 .Controls-btn:hover {
   background-color: #f2c57c;
   color: #b44;
