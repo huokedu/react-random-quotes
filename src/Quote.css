@@ -13,6 +13,6 @@
   color: #ef6f6c;
 }
 
-.Quote-from::before {
-  content: "—";
+.Quote-from {
+  font-style: italic;
 }
